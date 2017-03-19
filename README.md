@@ -2,7 +2,7 @@
 点外卖时间轴???不知道怎么命名...每天点外卖都会看到的,觉得挺好玩的就模仿着做一个,不喜勿喷~
 
 
-#gif
+# gif
 
   ![gif](https://raw.githubusercontent.com/SaltedFishkk/Meituan/master/gif/meituan2.gif)
   
@@ -10,8 +10,10 @@
 ## java
 >
 >
->  private MeiTuan meituan;\n
+>  private MeiTuan meituan;
+
 >    @Override
+
 >    protected void onCreate(Bundle savedInstanceState) {
 >        super.onCreate(savedInstanceState);
 >        setContentView(R.layout.activity_main);
