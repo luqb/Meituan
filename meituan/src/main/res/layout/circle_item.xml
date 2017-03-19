@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp">
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="match_parent">
+        <com.saltedfish.meituan.Circle
+            android:id="@+id/item_circle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="80dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="80dp"
+            android:background="@color/gray"/>
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="点击参与【邀新活动】"
+            android:maxLines="20"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            />
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="230dp"
+            android:layout_height="70dp"
+            android:src="@drawable/mmm"/>
+        <TextView
+            android:id="@+id/item_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="商品准备中,由商家配送,配送进度请咨询商家"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

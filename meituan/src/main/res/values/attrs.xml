@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Circle">
+        <attr name="radiusSize" format="integer"/>
+        <attr name="image" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="CircleItem">
+        <attr name="titleNoColor" format="color"/>
+        <attr name="titleIngColor" format="color"/>
+        <attr name="circleRadius" format="integer"/>
+        <attr name="desImage" format="integer"/>
+        <attr name="desText" format="string"/>
+        <attr name="titleText" format="string"/>
+        <attr name="circleImage" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="MeiTuan">
+        <attr name="activateColor" format="color"/>
+        <attr name="noActivateColor" format="color"/>
+    </declare-styleable>
+</resources>
