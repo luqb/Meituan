@@ -31,6 +31,7 @@
 >        new Handler().postDelayed(()->meituan.setStateIndex(5),14000);
 >
 >        //大于个数就相当与全部完成
+>
 >    }
 >
 ## xml
