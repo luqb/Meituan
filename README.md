@@ -3,11 +3,13 @@
 
 
 #gif
+
   ![gif](https://raw.githubusercontent.com/SaltedFishkk/Meituan/master/gif/meituan2.gif)
   
-#usage 
+# usage 
+## java
 >
-##java
+
   private MeiTuan meituan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +22,9 @@
         new Handler().postDelayed(()->meituan.setStateIndex(5),14000);
         //大于个数就相当与全部完成
     }
-##xml    
+>
+## xml
+>
     <com.saltedfish.meituan.MeiTuan
         android:id="@+id/meituan"
         android:layout_width="match_parent"
