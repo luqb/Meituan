@@ -10,8 +10,8 @@
 ## java
 >
 >
->  private MeiTuan meituan;
->    @Override
+>  private MeiTuan meituan;\n
+>    @Override
 >    protected void onCreate(Bundle savedInstanceState) {
 >        super.onCreate(savedInstanceState);
 >        setContentView(R.layout.activity_main);
