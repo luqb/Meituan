@@ -71,3 +71,12 @@
     </com.saltedfish.meituan.MeiTuan>
 
 >
+## 依赖
+>
+ dependencies {
+ 
+	        compile 'com.github.SaltedFishkk:Meituan:v1.0'
+         
+	}
+ 
+>
