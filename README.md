@@ -21,8 +21,6 @@
 >        setContentView(R.layout.activity_main);
 >
 >        meituan = (MeiTuan) findViewById(R.id.meituan);
->
->	 meituan = (MeiTuan) findViewById(R.id.meituan);
 >	
 >        meituan.setItemTitle(1,"申屠晓杰");
 >	
