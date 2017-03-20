@@ -22,11 +22,11 @@
 >
 >        meituan = (MeiTuan) findViewById(R.id.meituan);
 >	
->        meituan.setItemTitle(1,"申屠晓杰");
+>        meituan.setItemTitle(1,"黄焖鸡已经配送");
 >	
->        meituan.setItemDesText(2,"shentuxiaojie");
+>        meituan.setItemDesText(2,"黄焖鸡已经到达");
 >	
->        meituan.setItemDesImg(3,R.drawable.mmm);
+>        meituan.setItemDesImg(3,R.drawable.image);
 >	
 >        new Handler().postDelayed(()->meituan.setStateIndex(0),2000);
 >
