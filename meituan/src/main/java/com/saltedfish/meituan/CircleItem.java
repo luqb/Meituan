@@ -98,7 +98,12 @@ public class CircleItem extends RelativeLayout {
     }
     public void setDesImage(int id){
         image = id;
-        desImage.setImageDrawable(getResources().getDrawable(id));
+        if (image!=0){
+            desImage.setImageDrawable(getResources().getDrawable(image));
+        }else {
+            desImage.setImageDrawable(null);
+            desImage.setVisibility(View.GONE);
+        }
     }
     public CircleItem(Context context) {
         super(context);
@@ -151,7 +156,8 @@ public class CircleItem extends RelativeLayout {
         if (image!=0){
             desImage.setImageDrawable(getResources().getDrawable(image));
         }else {
-            //desImage.setImageDrawable(null);
+            desImage.setImageDrawable(null);
+            desImage.setVisibility(View.GONE);
         }
         if (circle_image!=0){
             mCircle.setImage(circle_image);
@@ -161,10 +167,6 @@ public class CircleItem extends RelativeLayout {
 
     }
 
-    @Override
-    protected void onFinishInflate() {
-        super.onFinishInflate();
-    }
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -191,32 +193,8 @@ public class CircleItem extends RelativeLayout {
         }
     }
 
-    @Override
-    protected void dispatchDraw(Canvas canvas) {
-        super.dispatchDraw(canvas);
-//        mCanvas = canvas;
-//        mPaint.setColor(COLOR_PATH_ING);
-//        mPaint.setStyle(Paint.Style.STROKE);
-//        mPaint.setStrokeWidth(2);
-//        //如果是不是开始项也不是结束项,就这样画
-//        if (startItem != true && endItem != true) {
-//            drawMidItem();
-//        }
-//        //如果是开始项
-//        if (startItem == true && endItem == false){
-//            drawStartItem();
-//        }
-//        //如果是结尾项
-//        if (startItem == false && endItem == true){
-//            drawEndItem();
-//        }
-//        //即使开始项 又是结尾项,相当于只有一个item
-//        if (startItem == true && endItem == true ){
-//            return;
-//        }
 
-    }
-
+    //画开始项
     private void drawStartItem(){
         switch (state) {
             case Circle.STATE_NOT:
@@ -259,6 +237,7 @@ public class CircleItem extends RelativeLayout {
                 }
         }
     }
+    //画中间项
     private void drawMidItem(){
         switch (state) {
             case Circle.STATE_NOT:
@@ -322,6 +301,7 @@ public class CircleItem extends RelativeLayout {
                 }
         }
     }
+    //画结束项
     private void drawEndItem(){
         switch (state) {
             case Circle.STATE_NOT:
@@ -364,12 +344,12 @@ public class CircleItem extends RelativeLayout {
                 }
         }
     }
-
+    //画实线
     private void drawSolidLine() {
         mPaint.setPathEffect(null);
         mCanvas.drawPath(mPath,mPaint);
     }
-
+    //画虚线
     private void drawDottedLine() {
         mPaint.setPathEffect(new DashPathEffect(new float[]{6,6},0));
         mCanvas.drawPath(mPath,mPaint);

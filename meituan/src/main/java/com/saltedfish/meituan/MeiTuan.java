@@ -70,6 +70,7 @@ public class MeiTuan extends LinearLayout {
 
     //-1表示一个都没开始
     //0表示第一个已经开始进行中了
+    //大于size表示全部都结束了
     public void setStateIndex(int index){
         if (index>=0 && index < circleItems.size()){
             circleItems.get(index).setState(Circle.STATE_ING);
@@ -88,4 +89,10 @@ public class MeiTuan extends LinearLayout {
         if (index>circleItems.size())
             circleItems.get(circleItems.size()-1).setState(Circle.STATE_SUCCESS);
     }
+    public CircleItem getItem(int index){return circleItems.get(index);}
+    public void setItemTitle(int index,String title){circleItems.get(index).setTitleText(title);}
+    public void setItemDesText(int index,String desText){circleItems.get(index).setDesText(desText);}
+    public void setItemDesImg(int index,int id){circleItems.get(index).setDesImage(id);}
+    public void setItemCircleImg(int index,int id){circleItems.get(index).setCircleImage(id);}
+    public void setItemState(int index,int state){circleItems.get(index).setState(state);}
 }

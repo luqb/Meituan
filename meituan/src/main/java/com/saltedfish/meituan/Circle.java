@@ -30,7 +30,7 @@ public class Circle extends View {
     private int COLOR_ING1 = 0xffFAEE1C;//正在进行中的颜色
     private int COLOR_ING2 = 0xffF95959;//小圆圈转的颜色
     //size
-    private int RADIUS = 50;
+    private int RADIUS = 20;
     //shape
     private Rect mRect;
     //state
@@ -72,6 +72,32 @@ public class Circle extends View {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mRect = new Rect(50,50,50+RADIUS*2,50+RADIUS*2);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        //super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int defWidth = 80;
+        int defHeigh = 100;
+
+        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+
+        if (heightMode == MeasureSpec.EXACTLY){
+            defHeigh = heightSize;
+        }else if (heightMode == MeasureSpec.AT_MOST){
+            defHeigh = Math.min(defHeigh,heightSize);
+        }
+        if (widthMode == MeasureSpec.EXACTLY){
+            defWidth = widthSize;
+        }else if (widthMode == MeasureSpec.AT_MOST){
+            defWidth = Math.min(defWidth,widthSize);
+        }
+
+        setMeasuredDimension(defWidth,defHeigh);
     }
 
     @Override
