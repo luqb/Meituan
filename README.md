@@ -22,6 +22,14 @@
 >
 >        meituan = (MeiTuan) findViewById(R.id.meituan);
 >
+>	 meituan = (MeiTuan) findViewById(R.id.meituan);
+>	
+>        meituan.setItemTitle(1,"申屠晓杰");
+>	
+>        meituan.setItemDesText(2,"shentuxiaojie");
+>	
+>        meituan.setItemDesImg(3,R.drawable.mmm);
+>	
 >        new Handler().postDelayed(()->meituan.setStateIndex(0),2000);
 >
 >        new Handler().postDelayed(()->meituan.setStateIndex(1),6000);
@@ -75,7 +83,7 @@
 >
  dependencies {
  
-	        compile 'com.github.SaltedFishkk:Meituan:v1.0'
+	        compile 'com.github.SaltedFishkk:Meituan:v1.1'
          
 	}
  
